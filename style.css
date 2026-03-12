@@ -147,6 +147,10 @@ img {
   line-height: 1.35;
 }
 
+.section-intro {
+  color: var(--muted);
+}
+
 .content-grid,
 .access-grid {
   display: grid;
@@ -200,6 +204,17 @@ img {
   color: var(--muted);
 }
 
+.photo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.photo-image-hero {
+  object-position: center 42%;
+}
+
 .photo-label {
   color: var(--accent);
   font-size: 0.78rem;
@@ -209,7 +224,8 @@ img {
 
 .flow-list,
 .price-grid,
-.notice-list {
+.notice-list,
+.news-list {
   display: grid;
   gap: 16px;
 }
@@ -217,7 +233,8 @@ img {
 .flow-card,
 .info-card,
 .notice-card,
-.access-card {
+.access-card,
+.news-card {
   padding: 20px;
   border: 1px solid var(--line);
   border-radius: 22px;
@@ -291,6 +308,35 @@ img {
   color: var(--muted);
 }
 
+.news-card {
+  display: grid;
+  gap: 8px;
+}
+
+.news-date {
+  color: var(--accent);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.news-card p:last-child {
+  color: var(--muted);
+}
+
+.news-note {
+  display: grid;
+  gap: 12px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255, 253, 249, 0.72);
+}
+
+.news-note p {
+  color: var(--muted);
+}
+
 .instagram-note {
   margin: 16px 0 18px;
   color: var(--muted);
@@ -349,7 +395,8 @@ img {
   }
 
   .flow-card,
-  .notice-card {
+  .notice-card,
+  .news-card {
     padding: 24px;
   }
 
@@ -375,5 +422,9 @@ img {
   .price-grid,
   .notice-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .news-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
