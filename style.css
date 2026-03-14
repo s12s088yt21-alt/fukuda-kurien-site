@@ -53,11 +53,11 @@ img {
 
 .stack {
   display: grid;
-  gap: 24px;
+  gap: 18px;
 }
 
 .hero {
-  padding: 28px 0 48px;
+  padding: 22px 0 34px;
   background:
     linear-gradient(180deg, rgba(34, 26, 19, 0.14), rgba(34, 26, 19, 0.28)),
     linear-gradient(90deg, rgba(247, 242, 232, 0.76), rgba(247, 242, 232, 0.12)),
@@ -66,8 +66,8 @@ img {
 
 .hero-layout {
   display: grid;
-  gap: 24px;
-  min-height: min(78vh, 760px);
+  gap: 18px;
+  min-height: min(64vh, 620px);
   align-items: end;
 }
 
@@ -77,10 +77,10 @@ img {
 }
 
 .hero-copy-panel {
-  max-width: 39rem;
-  padding: 24px;
+  max-width: 35rem;
+  padding: 20px;
   border: 1px solid rgba(255, 253, 249, 0.55);
-  border-radius: 28px;
+  border-radius: 24px;
   background: rgba(255, 250, 243, 0.56);
   backdrop-filter: blur(8px);
   box-shadow: var(--shadow);
@@ -107,6 +107,31 @@ img {
   display: grid;
   gap: 10px;
   margin-top: 6px;
+}
+
+.hero-facts {
+  display: grid;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.hero-facts p {
+  display: grid;
+  gap: 2px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: rgba(255, 253, 249, 0.7);
+  border: 1px solid rgba(138, 99, 56, 0.14);
+}
+
+.hero-facts strong {
+  font-size: 0.9rem;
+}
+
+.hero-facts span {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
 }
 
 .button {
@@ -146,7 +171,7 @@ img {
 }
 
 .section {
-  padding: 52px 0;
+  padding: 36px 0;
 }
 
 .section-soft {
@@ -155,7 +180,7 @@ img {
 
 .section-heading {
   display: grid;
-  gap: 8px;
+  gap: 6px;
 }
 
 .section h2 {
@@ -170,12 +195,13 @@ img {
 .content-grid,
 .access-grid {
   display: grid;
-  gap: 20px;
+  gap: 16px;
 }
 
 .text-block {
   display: grid;
-  gap: 16px;
+  gap: 14px;
+  max-width: 40rem;
   color: var(--muted);
 }
 
@@ -193,7 +219,7 @@ img {
 .photo-frame {
   width: 100%;
   aspect-ratio: 4 / 3;
-  border-radius: 24px;
+  border-radius: 18px;
   overflow: hidden;
   border: 1px solid var(--line);
   background:
@@ -235,7 +261,7 @@ img {
 .notice-list,
 .news-list {
   display: grid;
-  gap: 16px;
+  gap: 14px;
 }
 
 .flow-card,
@@ -243,9 +269,9 @@ img {
 .notice-card,
 .access-card,
 .news-card {
-  padding: 20px;
+  padding: 18px;
   border: 1px solid var(--line);
-  border-radius: 22px;
+  border-radius: 18px;
   background: var(--white);
   box-shadow: var(--shadow);
 }
@@ -253,7 +279,7 @@ img {
 .flow-head {
   display: grid;
   gap: 6px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .flow-step,
@@ -274,12 +300,12 @@ img {
 
 .flow-body {
   display: grid;
-  gap: 16px;
+  gap: 14px;
 }
 
 .flow-text {
   display: grid;
-  gap: 14px;
+  gap: 10px;
   color: var(--muted);
 }
 
@@ -308,12 +334,31 @@ img {
   color: var(--muted);
 }
 
+.map-block {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.map-frame {
+  width: 100%;
+  height: 260px;
+  border: 0;
+  border-radius: 18px;
+  background: var(--bg-soft);
+}
+
 .simple-list {
   display: grid;
   gap: 8px;
   margin: 0;
   padding-left: 1.1rem;
   color: var(--muted);
+}
+
+.simple-list-compact {
+  gap: 6px;
+  padding-left: 1rem;
 }
 
 .news-card {
@@ -335,9 +380,9 @@ img {
 .news-note {
   display: grid;
   gap: 12px;
-  padding: 20px;
+  padding: 18px;
   border: 1px solid var(--line);
-  border-radius: 22px;
+  border-radius: 18px;
   background: rgba(255, 253, 249, 0.72);
 }
 
@@ -375,13 +420,13 @@ img {
   }
 
   .hero {
-    padding: 52px 0 72px;
+    padding: 38px 0 52px;
   }
 
   .content-grid,
   .access-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    align-items: center;
+    grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+    align-items: start;
   }
 
   .content-grid-reverse > :first-child {
@@ -397,6 +442,10 @@ img {
     flex-wrap: wrap;
   }
 
+  .hero-facts {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .price-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -404,12 +453,7 @@ img {
   .flow-card,
   .notice-card,
   .news-card {
-    padding: 24px;
-  }
-
-  .flow-body {
-    grid-template-columns: 0.95fr 1.05fr;
-    align-items: start;
+    padding: 20px;
   }
 
   .footer-inner {
@@ -419,11 +463,11 @@ img {
 
 @media (min-width: 1024px) {
   .section {
-    padding: 72px 0;
+    padding: 54px 0;
   }
 
   .hero-layout {
-    min-height: min(82vh, 840px);
+    min-height: min(70vh, 700px);
   }
 
   .price-grid,
@@ -432,6 +476,6 @@ img {
   }
 
   .news-list {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
