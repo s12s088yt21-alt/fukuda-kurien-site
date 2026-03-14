@@ -47,7 +47,7 @@ img {
 }
 
 .container {
-  width: min(100% - 32px, 1080px);
+  width: min(100% - 40px, 1080px);
   margin: 0 auto;
 }
 
@@ -510,5 +510,26 @@ img {
 
   .news-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: min(100% - 44px, 1080px);
+  }
+
+  .section h2 {
+    line-height: 1.28;
+  }
+
+  .text-block,
+  .flow-text,
+  .section-intro,
+  .access-list dd,
+  .time-list dd,
+  .simple-list,
+  .instagram-note,
+  .profile-value {
+    font-size: 0.98rem;
   }
 }
