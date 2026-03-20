@@ -403,7 +403,13 @@
             園内の作業や季節の様子など、日々の小さなお知らせを掲載しています。
           </p>
 
-          <div class="news-list" id="news-list" data-source="data/news.json">
+          <div
+            class="news-list"
+            id="news-list"
+            data-source="https://script.google.com/macros/s/AKfycbzOFqL1Zu749GpHImWxQhnJRM8KW85kjTD5HiqV7QBwEjvgyjk911K7VH52dvU6hfz-/exec?feed=json"
+            data-source-format="jsonp"
+            data-fallback-source="data/news.json"
+          >
             <article class="news-card">
               <p class="news-date">2026.03.16</p>
               <h3>栗の木の剪定をしました</h3>
