@@ -43,6 +43,16 @@ function renderNewsItem(item) {
   `;
 }
 
+function renderEmptyNewsState() {
+  return `
+    <article class="news-card">
+      <p class="news-date">お知らせ準備中</p>
+      <h3>最新のお知らせを準備しています</h3>
+      <p>開園状況や季節の案内は、整い次第こちらに掲載します。</p>
+    </article>
+  `;
+}
+
 async function fetchNewsItems(source) {
   const response = await fetch(source, { cache: "no-store" });
   if (!response.ok) {
@@ -102,20 +112,34 @@ async function loadNews() {
       sourceFormat === "jsonp"
         ? await fetchJsonpNewsItems(source)
         : await fetchNewsItems(source);
-    if (!Array.isArray(items) || items.length === 0) {
+
+    if (Array.isArray(items) && items.length > 0) {
+      newsList.innerHTML = items.map((item) => renderNewsItem(item)).join("");
       return;
     }
 
-    newsList.innerHTML = items.map((item) => renderNewsItem(item)).join("");
+    if (fallbackSource && fallbackSource !== source) {
+      const fallbackItems = await fetchNewsItems(fallbackSource);
+      if (Array.isArray(fallbackItems) && fallbackItems.length > 0) {
+        newsList.innerHTML = fallbackItems
+          .map((item) => renderNewsItem(item))
+          .join("");
+        return;
+      }
+    }
+
+    newsList.innerHTML = renderEmptyNewsState();
   } catch (error) {
     if (!fallbackSource || fallbackSource === source) {
       console.error("Failed to render news feed", error);
+      newsList.innerHTML = renderEmptyNewsState();
       return;
     }
 
     try {
       const fallbackItems = await fetchNewsItems(fallbackSource);
       if (!Array.isArray(fallbackItems) || fallbackItems.length === 0) {
+        newsList.innerHTML = renderEmptyNewsState();
         return;
       }
 
@@ -125,6 +149,7 @@ async function loadNews() {
     } catch (fallbackError) {
       console.error("Failed to render news feed", error);
       console.error("Failed to render fallback news feed", fallbackError);
+      newsList.innerHTML = renderEmptyNewsState();
     }
   }
 }
