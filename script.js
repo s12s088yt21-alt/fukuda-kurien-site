@@ -43,6 +43,14 @@ function renderNewsItem(item) {
   `;
 }
 
+function renderLatestNews(items) {
+  if (!Array.isArray(items) || items.length === 0) {
+    return renderEmptyNewsState();
+  }
+
+  return renderNewsItem(items[0]);
+}
+
 function renderEmptyNewsState() {
   return `
     <article class="news-card">
@@ -114,16 +122,14 @@ async function loadNews() {
         : await fetchNewsItems(source);
 
     if (Array.isArray(items) && items.length > 0) {
-      newsList.innerHTML = items.map((item) => renderNewsItem(item)).join("");
+      newsList.innerHTML = renderLatestNews(items);
       return;
     }
 
     if (fallbackSource && fallbackSource !== source) {
       const fallbackItems = await fetchNewsItems(fallbackSource);
       if (Array.isArray(fallbackItems) && fallbackItems.length > 0) {
-        newsList.innerHTML = fallbackItems
-          .map((item) => renderNewsItem(item))
-          .join("");
+        newsList.innerHTML = renderLatestNews(fallbackItems);
         return;
       }
     }
@@ -143,9 +149,7 @@ async function loadNews() {
         return;
       }
 
-      newsList.innerHTML = fallbackItems
-        .map((item) => renderNewsItem(item))
-        .join("");
+      newsList.innerHTML = renderLatestNews(fallbackItems);
     } catch (fallbackError) {
       console.error("Failed to render news feed", error);
       console.error("Failed to render fallback news feed", fallbackError);
