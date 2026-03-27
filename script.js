@@ -36,7 +36,7 @@ function renderNewsItem(item) {
 
   return `
     <article class="news-card">
-      <p class="news-date">${date}</p>
+      <time datetime="${date}">${date}</time>
       <h3>${title}</h3>
       <p>${body}</p>
     </article>
@@ -54,7 +54,7 @@ function renderLatestNews(items) {
 function renderEmptyNewsState() {
   return `
     <article class="news-card">
-      <p class="news-date">お知らせ準備中</p>
+      <time datetime="">お知らせ準備中</time>
       <h3>最新のお知らせを準備しています</h3>
       <p>開園状況や季節の案内は、整い次第こちらに掲載します。</p>
     </article>
