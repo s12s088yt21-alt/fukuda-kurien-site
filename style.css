@@ -287,6 +287,19 @@ figure {
   background: rgba(255, 255, 255, 0.08);
 }
 
+.btn-instagram {
+  color: var(--surface-strong);
+  background: linear-gradient(135deg, #7f4b2c, #4b2e23);
+  border-color: rgba(75, 46, 35, 0.9);
+  box-shadow: 0 12px 28px rgba(75, 46, 35, 0.18);
+}
+
+.btn-instagram:hover,
+.btn-instagram:focus-visible {
+  background: linear-gradient(135deg, #8f5633, #341d15);
+  box-shadow: 0 16px 32px rgba(52, 29, 21, 0.22);
+}
+
 .hero-points {
   display: flex;
   flex-wrap: wrap;
