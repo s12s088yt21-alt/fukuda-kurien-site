@@ -8,30 +8,43 @@
       name="description"
       content="福田観光栗園の栗拾い体験、料金、ご来園前のご案内、アクセス情報を掲載しています。"
     />
+    <meta name="format-detection" content="telephone=yes" />
+    <meta property="og:title" content="福田観光栗園 | 丹波の自然の中で楽しむ栗拾い" />
+    <meta
+      property="og:description"
+      content="四代続く栗園で、丹波の自然と秋の味覚を楽しむ栗拾い体験。アクセス、料金、最新情報をご案内しています。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/hero.JPG" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="#top">
+        <a class="brand" href="#top" title="ページ上部へ戻る">
           <span class="brand-kicker">Tamba Chestnut Picking</span>
           <span class="brand-name">福田観光栗園</span>
         </a>
 
         <nav class="site-nav" aria-label="ページ内ナビゲーション">
-          <a href="#experience">体験について</a>
-          <a href="#gallery">ギャラリー</a>
-          <a href="#flow">流れ</a>
-          <a href="#price">料金</a>
-          <a href="#story">栗園の思い</a>
-          <a href="#access">アクセス</a>
+          <a href="#experience" title="栗拾い体験について見る">体験について</a>
+          <a href="#gallery" title="ギャラリーを見る">ギャラリー</a>
+          <a href="#flow" title="体験の流れを見る">流れ</a>
+          <a href="#price" title="料金を見る">料金</a>
+          <a href="#story" title="栗園の思いを見る">栗園の思い</a>
+          <a href="#access" title="アクセス情報を見る">アクセス</a>
         </nav>
       </div>
     </header>
 
     <header class="hero" id="top">
       <div class="hero-media">
-        <img src="images/hero.JPG" alt="栗の実が写る福田観光栗園の風景" />
+        <img
+          src="images/hero.JPG"
+          alt="栗の実が写る福田観光栗園の風景"
+          width="1280"
+          height="960"
+        />
       </div>
       <div class="hero-overlay"></div>
       <div class="container">
@@ -44,8 +57,8 @@
           </p>
 
           <div class="hero-actions">
-            <a href="#access" class="btn btn-primary">アクセスを見る</a>
-            <a href="#instagram" class="btn btn-secondary">Instagramを見る</a>
+            <a href="#access" class="btn btn-primary" title="アクセス情報を見る">アクセスを見る</a>
+            <a href="#instagram" class="btn btn-secondary" title="Instagramを見る">Instagramを見る</a>
           </div>
 
           <ul class="hero-points">
@@ -136,6 +149,8 @@
                 src="images/scenery.jpeg"
                 alt="丹波の自然に囲まれた福田観光栗園の風景"
                 loading="lazy"
+                width="4032"
+                height="2489"
               />
             </div>
           </div>
@@ -153,29 +168,133 @@
           </div>
 
           <div class="gallery-grid">
-            <figure class="gallery-item gallery-item-large">
-              <img src="images/gallery-1.jpg" alt="栗園の風景写真" loading="lazy" />
+            <figure
+              class="gallery-item gallery-item-large"
+              tabindex="0"
+              role="button"
+              aria-label="ギャラリー画像を拡大表示"
+              data-lightbox-src="images/gallery-1.jpg"
+              data-lightbox-alt="栗園の風景写真"
+            >
+              <img
+                src="images/gallery-1.jpg"
+                alt="栗園の風景写真"
+                loading="lazy"
+                width="1280"
+                height="960"
+              />
             </figure>
-            <figure class="gallery-item">
-              <img src="images/gallery-3.JPG" alt="栗園の様子" loading="lazy" />
+            <figure
+              class="gallery-item"
+              tabindex="0"
+              role="button"
+              aria-label="ギャラリー画像を拡大表示"
+              data-lightbox-src="images/gallery-3.JPG"
+              data-lightbox-alt="園内の栗の木と風景"
+            >
+              <img
+                src="images/gallery-3.JPG"
+                alt="園内の栗の木と風景"
+                loading="lazy"
+                width="8064"
+                height="6048"
+              />
             </figure>
-            <figure class="gallery-item">
-              <img src="images/gallery-4.jpeg" alt="栗園の様子" loading="lazy" />
+            <figure
+              class="gallery-item"
+              tabindex="0"
+              role="button"
+              aria-label="ギャラリー画像を拡大表示"
+              data-lightbox-src="images/gallery-4.jpeg"
+              data-lightbox-alt="栗園の風景"
+            >
+              <img
+                src="images/gallery-4.jpeg"
+                alt="栗園の風景"
+                loading="lazy"
+                width="2048"
+                height="1536"
+              />
             </figure>
-            <figure class="gallery-item">
-              <img src="images/gallery-5.jpeg" alt="栗園の様子" loading="lazy" />
+            <figure
+              class="gallery-item"
+              tabindex="0"
+              role="button"
+              aria-label="ギャラリー画像を拡大表示"
+              data-lightbox-src="images/gallery-5.jpeg"
+              data-lightbox-alt="園内の景色"
+            >
+              <img
+                src="images/gallery-5.jpeg"
+                alt="園内の景色"
+                loading="lazy"
+                width="3024"
+                height="4032"
+              />
             </figure>
-            <figure class="gallery-item">
-              <img src="images/gallery-6.jpeg" alt="栗園の様子" loading="lazy" />
+            <figure
+              class="gallery-item"
+              tabindex="0"
+              role="button"
+              aria-label="ギャラリー画像を拡大表示"
+              data-lightbox-src="images/gallery-6.jpeg"
+              data-lightbox-alt="秋の栗園の様子"
+            >
+              <img
+                src="images/gallery-6.jpeg"
+                alt="秋の栗園の様子"
+                loading="lazy"
+                width="4032"
+                height="3024"
+              />
             </figure>
-            <figure class="gallery-item">
-              <img src="images/gallery-7.jpeg" alt="栗園の様子" loading="lazy" />
+            <figure
+              class="gallery-item"
+              tabindex="0"
+              role="button"
+              aria-label="ギャラリー画像を拡大表示"
+              data-lightbox-src="images/gallery-7.jpeg"
+              data-lightbox-alt="栗園の風景"
+            >
+              <img
+                src="images/gallery-7.jpeg"
+                alt="栗園の風景"
+                loading="lazy"
+                width="1024"
+                height="768"
+              />
             </figure>
-            <figure class="gallery-item">
-              <img src="images/gallery-8.jpeg" alt="栗園の様子" loading="lazy" />
+            <figure
+              class="gallery-item"
+              tabindex="0"
+              role="button"
+              aria-label="ギャラリー画像を拡大表示"
+              data-lightbox-src="images/gallery-8.jpeg"
+              data-lightbox-alt="栗園の景色"
+            >
+              <img
+                src="images/gallery-8.jpeg"
+                alt="栗園の景色"
+                loading="lazy"
+                width="4032"
+                height="3024"
+              />
             </figure>
-            <figure class="gallery-item">
-              <img src="images/gallery-9.jpeg" alt="栗園の様子" loading="lazy" />
+            <figure
+              class="gallery-item"
+              tabindex="0"
+              role="button"
+              aria-label="ギャラリー画像を拡大表示"
+              data-lightbox-src="images/gallery-9.jpeg"
+              data-lightbox-alt="栗園の景色"
+            >
+              <img
+                src="images/gallery-9.jpeg"
+                alt="栗園の景色"
+                loading="lazy"
+                width="4032"
+                height="3024"
+              />
             </figure>
           </div>
         </div>
@@ -192,7 +311,13 @@
           <div class="flow-grid">
             <article class="flow-card">
               <span class="flow-number">01</span>
-              <img src="images/reception.jpeg" alt="受付の様子" loading="lazy" />
+              <img
+                src="images/reception.jpeg"
+                alt="受付の様子"
+                loading="lazy"
+                width="4032"
+                height="3024"
+              />
               <h3>受付</h3>
               <p>
                 ご来園後、受付にて栗拾いの流れや注意点をご案内します。初めての方でも安心して始められます。
@@ -205,7 +330,13 @@
 
             <article class="flow-card">
               <span class="flow-number">02</span>
-              <img src="images/picking.jpg" alt="栗拾い体験の様子" loading="lazy" />
+              <img
+                src="images/picking.jpg"
+                alt="栗拾い体験の様子"
+                loading="lazy"
+                width="1478"
+                height="1108"
+              />
               <h3>栗拾い</h3>
               <p>
                 園内を自由に歩きながら、地面に落ちた栗を拾っていただきます。自然の中の散策もお楽しみください。
@@ -218,7 +349,13 @@
 
             <article class="flow-card">
               <span class="flow-number">03</span>
-              <img src="images/takeout.jpeg" alt="計量やお持ち帰りの様子" loading="lazy" />
+              <img
+                src="images/takeout.jpeg"
+                alt="計量やお持ち帰りの様子"
+                loading="lazy"
+                width="4032"
+                height="3024"
+              />
               <h3>計量・お持ち帰り</h3>
               <p>
                 拾った栗は受付で計量し、お持ち帰りいただけます。焼き栗や栗ご飯もあわせてお楽しみいただけます。
@@ -338,7 +475,13 @@
             </div>
 
             <div class="story-visual">
-              <img src="images/farm-story.jpg" alt="栗づくりの風景" loading="lazy" />
+              <img
+                src="images/farm-story.jpg"
+                alt="栗づくりの風景"
+                loading="lazy"
+                width="1280"
+                height="960"
+              />
             </div>
           </div>
         </div>
@@ -387,7 +530,7 @@
                 </div>
                 <div>
                   <dt>電話番号</dt>
-                  <dd><a href="tel:0795821616">0795-82-1616</a></dd>
+                  <dd><a href="tel:0795821616" title="電話をかける">0795-82-1616</a></dd>
                 </div>
                 <div>
                   <dt>受付時間</dt>
@@ -409,6 +552,7 @@
                   href="https://www.google.com/maps/place/%E7%A6%8F%E7%94%B0%E8%A6%B3%E5%85%89%E6%A0%97%E5%9C%92/@35.1134997,135.0077245,646m/data=!3m2!1e3!4b1!4m6!3m5!1s0x600008177244990f:0x8ef6844587b8d392!8m2!3d35.1134997!4d135.0102994!16s%2Fg%2F1vj5_1lk?authuser=0&entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                   rel="noreferrer"
+                  title="Googleマップで福田観光栗園を開く"
                 >
                   Googleマップを開く
                 </a>
@@ -418,6 +562,7 @@
                   href="https://www.instagram.com/fukutakurien?igsh=MXA2ZnRoNXhqczF3MA%3D%3D&utm_source=qr"
                   target="_blank"
                   rel="noreferrer"
+                  title="福田観光栗園のInstagramを見る"
                 >
                   Instagramを見る
                 </a>
@@ -432,7 +577,13 @@
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
               ></iframe>
-              <img src="images/shop.jpeg" alt="受付まわりの様子" loading="lazy" />
+              <img
+                src="images/shop.jpeg"
+                alt="受付まわりの様子"
+                loading="lazy"
+                width="3024"
+                height="4032"
+              />
             </div>
           </div>
         </div>
@@ -456,6 +607,13 @@
       <a href="#access">アクセス</a>
       <a href="#news">お知らせ</a>
       <a href="#instagram">Instagram</a>
+    </div>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox-close" id="lightbox-close" type="button" aria-label="拡大画像を閉じる">
+        ×
+      </button>
+      <img class="lightbox-image" id="lightbox-image" src="" alt="" />
     </div>
 
     <script src="script.js"></script>
