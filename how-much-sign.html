@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>印刷用看板 | 栗はどれくらい持って帰る？</title>
+    <style>
+      @page { size: A4 portrait; margin: 0; }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        color: #291b16;
+        background: #ede9e3;
+        font-family: "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+      }
+      .print-button {
+        display: block;
+        margin: 18px auto;
+        padding: 12px 24px;
+        border: 0;
+        border-radius: 999px;
+        color: #fff;
+        background: #4b2e23;
+        font: inherit;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      .sheet {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0 auto 24px;
+        padding: 14mm;
+        border: 4mm solid #4b2e23;
+        background: #fffaf3;
+      }
+      header { text-align: center; }
+      .kicker {
+        margin: 0 0 2mm;
+        color: #8a5b30;
+        font-size: 14pt;
+        font-weight: 800;
+        letter-spacing: .12em;
+      }
+      h1 {
+        margin: 0;
+        font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+        font-size: 35pt;
+        line-height: 1.2;
+      }
+      .lead {
+        margin: 4mm auto 0;
+        font-size: 16pt;
+        font-weight: 700;
+        line-height: 1.55;
+      }
+      .cards {
+        display: grid;
+        gap: 4mm;
+        margin: 9mm 0 6mm;
+      }
+      .card {
+        display: grid;
+        grid-template-columns: 42mm 1fr;
+        align-items: center;
+        min-height: 39mm;
+        padding: 5mm 6mm;
+        border: 2px solid #5d4034;
+        border-radius: 4mm;
+        background: #fff;
+      }
+      .amount {
+        color: #7c4928;
+        font-size: 20pt;
+        font-weight: 900;
+      }
+      .card h2 {
+        margin: 0 0 1mm;
+        font-size: 19pt;
+      }
+      .card p {
+        margin: 0;
+        font-size: 13pt;
+        line-height: 1.5;
+      }
+      .freedom {
+        margin: 6mm 0;
+        padding: 5mm;
+        color: #fff;
+        border-radius: 3mm;
+        background: #4b2e23;
+        text-align: center;
+        font-size: 16pt;
+        font-weight: 800;
+        line-height: 1.55;
+      }
+      .price {
+        margin: 0;
+        text-align: center;
+        font-size: 17pt;
+        font-weight: 800;
+      }
+      .small {
+        margin: 2mm 0 0;
+        text-align: center;
+        color: #68544b;
+        font-size: 11pt;
+      }
+      footer {
+        margin-top: 7mm;
+        padding-top: 4mm;
+        border-top: 1px solid #b8a99e;
+        text-align: center;
+        font-size: 14pt;
+        font-weight: 800;
+      }
+      @media screen and (max-width: 800px) {
+        body { padding: 0 12px; }
+        .sheet {
+          width: 100%;
+          min-height: 0;
+          padding: 24px 18px;
+          border-width: 10px;
+        }
+        h1 { font-size: clamp(30px, 10vw, 46px); }
+        .lead { font-size: 16px; }
+        .card {
+          grid-template-columns: 1fr;
+          gap: 6px;
+          min-height: 0;
+          padding: 18px;
+        }
+        .amount { font-size: 20px; }
+        .card h2 { font-size: 20px; }
+        .card p { font-size: 15px; }
+        .freedom, .price { font-size: 17px; }
+      }
+      @media print {
+        body { background: #fff; }
+        .print-button { display: none; }
+        .sheet {
+          width: 210mm;
+          height: 296mm;
+          min-height: 0;
+          margin: 0;
+          padding: 14mm;
+          border-width: 4mm;
+          overflow: hidden;
+          break-after: avoid;
+        }
+        .card {
+          grid-template-columns: 42mm 1fr;
+          min-height: 39mm;
+          padding: 5mm 6mm;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button class="print-button" type="button" onclick="window.print()">この看板を印刷する</button>
+    <main class="sheet">
+      <header>
+        <p class="kicker">おうちでの楽しみ方を考えてみよう</p>
+        <h1>栗はどれくらい<br />持って帰る？</h1>
+        <p class="lead">栗ご飯、おすそ分け、冷凍保存。<br />食べ方を思い浮かべながら、好きなだけどうぞ。</p>
+      </header>
+
+      <section class="cards" aria-label="持ち帰り量の参考">
+        <article class="card">
+          <div class="amount">1kgくらい</div>
+          <div>
+            <h2>まずはおうちで</h2>
+            <p>栗ご飯やゆで栗など、気軽に楽しみたい方に。</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="amount">2kgくらい</div>
+          <div>
+            <h2>何度か楽しんで、おすそ分けも</h2>
+            <p>おうちで味わいながら、ご家族や友人にもどうぞ。</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="amount">3kg以上</div>
+          <div>
+            <h2>冷凍して、あとの楽しみに</h2>
+            <p>栗ご飯やお菓子づくりを、あとから楽しみたい方に。</p>
+          </div>
+        </article>
+      </section>
+
+      <p class="freedom">持ち帰る量は自由です<br />自分で拾った栗を、好きなだけどうぞ</p>
+      <p class="price">拾った栗は 1kg 2,200円で量り売り</p>
+      <p class="small">上の量は、食べ方を考えるための目安です。</p>
+
+      <footer>福田観光栗園</footer>
+    </main>
+  </body>
+</html>

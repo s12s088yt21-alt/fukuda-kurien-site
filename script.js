@@ -89,7 +89,7 @@ function escapeHtml(value) {
 }
 
 function renderNewsItem(item) {
-  const title = escapeHtml(item.title || "お知らせ");
+  const title = escapeHtml(item.title || "栗園からのお知らせ");
   const date = escapeHtml(item.publishedAt || item.date || "");
   const body = escapeHtml(item.body || "").replace(/\n/g, "<br>");
 
@@ -113,9 +113,9 @@ function renderLatestNews(items) {
 function renderEmptyNewsState() {
   return `
     <article class="news-card">
-      <time datetime="">お知らせ準備中</time>
-      <h3>最新のお知らせを準備しています</h3>
-      <p>開園状況や季節の案内は、整い次第こちらに掲載します。</p>
+      <time datetime="">ただいま準備中です</time>
+      <h3>栗園からのお知らせ</h3>
+      <p>開園の様子や季節の便りを、こちらでお知らせします。</p>
     </article>
   `;
 }
