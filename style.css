@@ -720,6 +720,10 @@ figure {
   gap: 20px;
 }
 
+.storage-grid-two {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .amount-card,
 .use-card,
 .storage-card,
@@ -809,6 +813,98 @@ figure {
 
 .storage-note p {
   margin: 0;
+}
+
+.storage-check-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 28px;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 24px 24px 24px 48px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.storage-method-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.storage-method-card,
+.storage-faq article,
+.storage-download {
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.storage-method-card h3,
+.storage-faq h3,
+.storage-download h2 {
+  margin: 0 0 12px;
+  color: var(--primary);
+  font-size: 1.3rem;
+}
+
+.storage-method-card ol {
+  margin: 0 0 16px;
+  padding-left: 1.35em;
+}
+
+.storage-method-card li + li {
+  margin-top: 8px;
+}
+
+.storage-method-card p,
+.storage-faq p,
+.storage-download p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.storage-faq {
+  display: grid;
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.storage-download {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 190px;
+  gap: 28px;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--accent-soft);
+}
+
+.storage-download-actions {
+  justify-content: flex-start;
+}
+
+.storage-qr {
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+  padding: 14px;
+  border-radius: var(--radius-md);
+  background: #fff;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.storage-qr img {
+  width: 150px;
+  aspect-ratio: 1;
 }
 
 .notes-grid {
@@ -1048,7 +1144,8 @@ figure {
 
   .amount-grid,
   .use-grid,
-  .storage-grid {
+  .storage-grid,
+  .storage-method-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1088,8 +1185,20 @@ figure {
 
   .amount-grid,
   .use-grid,
-  .storage-grid {
+  .storage-grid,
+  .storage-method-grid,
+  .storage-check-list,
+  .storage-download {
     grid-template-columns: 1fr;
+  }
+
+  .storage-download {
+    justify-items: stretch;
+  }
+
+  .storage-qr {
+    max-width: 210px;
+    justify-self: center;
   }
 
   .quick-info {
