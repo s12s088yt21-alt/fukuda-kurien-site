@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://s12s088yt21-alt.github.io/fukuda-kurien-site/sitemap.xml
