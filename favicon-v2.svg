@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg" x1="8" y1="6" x2="56" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4f654b"/>
+      <stop offset="1" stop-color="#263326"/>
+    </linearGradient>
+    <linearGradient id="nut" x1="25" y1="22" x2="43" y2="51" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#c88442"/>
+      <stop offset=".48" stop-color="#8f4d25"/>
+      <stop offset="1" stop-color="#542917"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="url(#bg)"/>
+  <g fill="none" stroke="#d5ad66" stroke-linecap="round" stroke-width="2">
+    <path d="M32 8v11"/>
+    <path d="m20 11 6 10"/>
+    <path d="m44 11-6 10"/>
+    <path d="m12 20 11 6"/>
+    <path d="m52 20-11 6"/>
+    <path d="M9 32h12"/>
+    <path d="M55 32H43"/>
+    <path d="m13 44 10-6"/>
+    <path d="m51 44-10-6"/>
+  </g>
+  <path d="M20 36c0-10 5-17 12-17s12 7 12 17c0 11-5 18-12 18s-12-7-12-18Z" fill="url(#nut)" stroke="#f0d49e" stroke-width="1.5"/>
+  <path d="M21 38c3-4 7-6 11-6s8 2 11 6c-2 5-6 8-11 8s-9-3-11-8Z" fill="#f2ddad"/>
+  <path d="M32 18c4 3 5 6 4 10" fill="none" stroke="#f0d49e" stroke-linecap="round" stroke-width="2"/>
+</svg>
