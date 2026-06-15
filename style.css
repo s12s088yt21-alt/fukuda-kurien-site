@@ -335,9 +335,43 @@ figure {
   font-size: 0.95rem;
 }
 
+.season-status {
+  position: relative;
+  z-index: 3;
+  padding: 18px 0;
+  color: #fff8f1;
+  background: var(--green);
+}
+
+.season-status-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  text-align: center;
+}
+
+.season-status-label {
+  padding: 5px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.36);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.season-status strong {
+  font-size: 1.12rem;
+}
+
+.season-status p {
+  color: rgba(255, 248, 241, 0.82);
+  font-size: 0.92rem;
+}
+
 .quick-info {
   position: relative;
-  margin-top: -42px;
+  padding-top: 24px;
   z-index: 2;
 }
 
@@ -406,7 +440,6 @@ figure {
 .feature-card,
 .note-card,
 .side-panel,
-.news-card,
 .flow-card,
 .price-card {
   border-radius: var(--radius-lg);
@@ -969,35 +1002,6 @@ figure {
   color: var(--muted);
 }
 
-.news-list {
-  display: grid;
-  justify-items: center;
-}
-
-.news-card {
-  max-width: 780px;
-  margin: 0 auto;
-  padding: 26px 28px;
-}
-
-.news-card time {
-  display: inline-block;
-  margin-bottom: 10px;
-  color: var(--accent);
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
-
-.news-card h3 {
-  margin: 0 0 10px;
-  font-size: 1.3rem;
-}
-
-.news-card p {
-  margin: 0;
-  color: var(--muted);
-}
-
 .access-list {
   display: grid;
   gap: 14px;
@@ -1088,12 +1092,16 @@ figure {
 
 .mobile-cta a {
   min-width: 88px;
-  padding: 11px 14px;
+  padding: 11px 12px;
   border-radius: 999px;
   color: #fff9f3;
   text-align: center;
   font-weight: 700;
-  font-size: 0.92rem;
+  font-size: 0.86rem;
+}
+
+.mobile-cta a:first-child {
+  background: rgba(71, 91, 69, 0.88);
 }
 
 .mobile-cta a:nth-child(2) {
@@ -1201,8 +1209,17 @@ figure {
     justify-self: center;
   }
 
+  .season-status-inner {
+    display: grid;
+    gap: 5px;
+  }
+
+  .season-status-label {
+    justify-self: center;
+  }
+
   .quick-info {
-    margin-top: -20px;
+    padding-top: 18px;
   }
 
   .gallery-item,
