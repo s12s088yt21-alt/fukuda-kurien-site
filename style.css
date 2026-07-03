@@ -1235,6 +1235,12 @@ figure {
     font-size: clamp(2.4rem, 11vw, 4rem);
   }
 
+  .guide-hero h1 {
+    font-size: clamp(2rem, 9.2vw, 3rem);
+    line-height: 1.18;
+    white-space: nowrap;
+  }
+
   .info-grid,
   .flow-grid,
   .pricing-grid,
