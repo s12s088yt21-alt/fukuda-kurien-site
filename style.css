@@ -967,8 +967,8 @@ figure {
 
 .storage-download {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 190px;
-  gap: 28px;
+  grid-template-columns: 1fr;
+  gap: 18px;
   align-items: center;
   max-width: 900px;
   margin: 0 auto;
@@ -977,24 +977,6 @@ figure {
 
 .storage-download-actions {
   justify-content: flex-start;
-}
-
-.storage-qr {
-  display: grid;
-  gap: 8px;
-  justify-items: center;
-  padding: 14px;
-  border-radius: var(--radius-md);
-  background: #fff;
-  color: var(--muted);
-  font-size: 0.82rem;
-  font-weight: 700;
-  text-align: center;
-}
-
-.storage-qr img {
-  width: 150px;
-  aspect-ratio: 1;
 }
 
 .notes-grid {
@@ -1290,11 +1272,6 @@ figure {
 
   .storage-download {
     justify-items: stretch;
-  }
-
-  .storage-qr {
-    max-width: 210px;
-    justify-self: center;
   }
 
   .season-status-inner {
