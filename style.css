@@ -1256,6 +1256,21 @@ figure {
     white-space: nowrap;
   }
 
+  .storage-page .section-heading h2 {
+    font-size: clamp(1.55rem, 6.5vw, 2.15rem);
+    line-height: 1.22;
+    white-space: nowrap;
+  }
+
+  .storage-page .storage-card h2,
+  .storage-page .storage-method-card h3,
+  .storage-page .storage-note h3,
+  .storage-page .storage-download h2 {
+    font-size: clamp(1.12rem, 5vw, 1.3rem);
+    line-height: 1.35;
+    white-space: nowrap;
+  }
+
   .info-grid,
   .flow-grid,
   .pricing-grid,
