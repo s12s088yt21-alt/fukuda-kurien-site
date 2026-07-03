@@ -204,10 +204,15 @@ figure {
 }
 
 .hero-media,
+.hero-media picture,
 .hero-media img,
 .hero-overlay {
   position: absolute;
   inset: 0;
+}
+
+.hero-media picture {
+  display: block;
 }
 
 .hero-media img {
