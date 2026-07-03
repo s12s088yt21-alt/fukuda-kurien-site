@@ -683,6 +683,34 @@ figure {
   color: rgba(255, 248, 241, 0.84);
 }
 
+.take-home-promo-list {
+  display: grid;
+  gap: 10px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.take-home-promo-list li {
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  gap: 12px;
+  align-items: start;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 248, 241, 0.16);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.take-home-promo-list strong {
+  color: #fff8f1;
+  line-height: 1.5;
+}
+
+.take-home-promo-list span {
+  color: rgba(255, 248, 241, 0.82);
+}
+
 .take-home-promo-actions {
   display: grid;
   gap: 12px;
@@ -748,6 +776,7 @@ figure {
   border-radius: var(--radius-md);
   background: rgba(255, 255, 255, 0.72);
   font-weight: 700;
+  text-align: left;
 }
 
 .guide-section {
@@ -814,7 +843,7 @@ figure {
 .guide-callout {
   max-width: 850px;
   margin: 34px auto 0;
-  text-align: center;
+  text-align: left;
   background: var(--accent-soft);
   box-shadow: none;
 }
@@ -1243,6 +1272,11 @@ figure {
 
   .quick-info {
     padding-top: 18px;
+  }
+
+  .take-home-promo-list li {
+    grid-template-columns: 1fr;
+    gap: 4px;
   }
 
   .gallery-item,
