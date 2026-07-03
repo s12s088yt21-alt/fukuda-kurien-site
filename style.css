@@ -890,6 +890,21 @@ figure {
   margin: 0;
 }
 
+.storage-note h3 {
+  margin: 0 0 8px;
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+
+.storage-note p + p {
+  margin-top: 8px;
+}
+
+.storage-note-meta {
+  color: var(--primary);
+  font-weight: 700;
+}
+
 .storage-check-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
