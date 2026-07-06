@@ -36,7 +36,6 @@ body {
     radial-gradient(circle at top left, rgba(156, 106, 54, 0.06), transparent 22%),
     linear-gradient(180deg, #fbf8f4 0%, #f5efe7 100%);
   font-family:
-    "M PLUS Rounded 1c",
     "Hiragino Sans",
     "Yu Gothic",
     "Meiryo",
@@ -81,6 +80,8 @@ figure {
 
 .section {
   padding: 88px 0;
+  content-visibility: auto;
+  contain-intrinsic-size: 720px;
 }
 
 .section-heading {
@@ -113,7 +114,6 @@ figure {
 .access-copy h2 {
   margin: 0 0 14px;
   font-family:
-    "M PLUS Rounded 1c",
     "Hiragino Sans",
     "Yu Gothic",
     sans-serif;
@@ -237,7 +237,6 @@ figure {
 .hero-content h1 {
   margin: 0 0 18px;
   font-family:
-    "M PLUS Rounded 1c",
     "Hiragino Sans",
     "Yu Gothic",
     sans-serif;
@@ -252,6 +251,11 @@ figure {
   margin: 0 0 28px;
   color: rgba(255, 250, 245, 0.92);
   font-size: clamp(1rem, 1.5vw, 1.12rem);
+}
+
+.hero-highlight {
+  color: #fffaf5;
+  font-weight: 800;
 }
 
 .hero-actions {
@@ -674,7 +678,6 @@ figure {
 .take-home-promo h2 {
   margin: 0 0 14px;
   font-family:
-    "M PLUS Rounded 1c",
     "Hiragino Sans",
     "Yu Gothic",
     sans-serif;
@@ -757,7 +760,6 @@ figure {
 .guide-hero h1 {
   margin: 0 0 18px;
   font-family:
-    "M PLUS Rounded 1c",
     "Hiragino Sans",
     "Yu Gothic",
     sans-serif;
