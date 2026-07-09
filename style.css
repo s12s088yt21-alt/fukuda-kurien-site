@@ -339,22 +339,37 @@ figure {
   text-underline-offset: 3px;
 }
 
+.hero-points-label {
+  margin: 0 0 10px;
+  color: rgba(255, 250, 245, 0.72);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
 .hero-points {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px 12px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, max-content));
+  gap: 8px 22px;
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
 .hero-points li {
-  padding: 10px 14px;
-  border-radius: 999px;
-  background: rgba(255, 250, 245, 0.12);
-  border: 1px solid rgba(255, 250, 245, 0.18);
-  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  color: rgba(255, 250, 245, 0.9);
   font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.hero-points li::before {
+  content: "✓";
+  flex: 0 0 auto;
+  color: #fffaf5;
+  font-weight: 800;
 }
 
 .season-status {
@@ -1237,6 +1252,11 @@ figure {
 
   .hero-content h1 {
     font-size: clamp(2.4rem, 11vw, 4rem);
+  }
+
+  .hero-points {
+    grid-template-columns: 1fr;
+    gap: 7px;
   }
 
   .guide-hero h1 {
