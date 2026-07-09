@@ -3,6 +3,13 @@ const galleryItems = document.querySelectorAll(".gallery-item[data-lightbox-src]
 const lightbox = document.querySelector("#lightbox");
 const lightboxImage = document.querySelector("#lightbox-image");
 const lightboxClose = document.querySelector("#lightbox-close");
+const instagramUrl = "https://www.instagram.com/fukutakurien?igsh=MXA2ZnRoNXhqczF3MA%3D%3D&utm_source=qr";
+
+document.querySelectorAll('a[href="#instagram"]').forEach((link) => {
+  link.setAttribute("href", instagramUrl);
+  link.setAttribute("target", "_blank");
+  link.setAttribute("rel", "noreferrer");
+});
 
 const observer = new IntersectionObserver(
   (entries) => {
