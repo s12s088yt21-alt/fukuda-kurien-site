@@ -90,6 +90,10 @@ figure {
   scroll-margin-top: calc(var(--header-h) + 28px);
 }
 
+.access-section {
+  content-visibility: visible;
+}
+
 .section-heading {
   max-width: 760px;
   margin: 0 auto 42px;

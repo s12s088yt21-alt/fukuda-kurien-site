@@ -11,6 +11,30 @@ document.querySelectorAll('a[href="#instagram"]').forEach((link) => {
   link.setAttribute("rel", "noreferrer");
 });
 
+document.querySelectorAll('a[href="#access"]').forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const target = document.querySelector("#access");
+
+    if (!target) {
+      return;
+    }
+
+    event.preventDefault();
+
+    const headerHeight = Number.parseFloat(
+      getComputedStyle(document.documentElement).getPropertyValue("--header-h"),
+    ) || 0;
+    const offset = headerHeight + 28;
+    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+
+    window.scrollTo({
+      top,
+      behavior: "smooth",
+    });
+    history.replaceState(null, "", "#access");
+  });
+});
+
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
