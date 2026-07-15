@@ -81,17 +81,11 @@ figure {
 
 .section {
   padding: 88px 0;
-  content-visibility: auto;
-  contain-intrinsic-size: 720px;
   scroll-margin-top: calc(var(--header-h) + 24px);
 }
 
 #access {
   scroll-margin-top: calc(var(--header-h) + 28px);
-}
-
-.access-section {
-  content-visibility: visible;
 }
 
 .section-heading {
