@@ -385,7 +385,9 @@ figure {
   z-index: 3;
   padding: 18px 0;
   color: #fff8f1;
-  background: var(--green);
+  background: linear-gradient(100deg, #3e503d 0%, #536448 58%, #6b573b 100%);
+  border-bottom: 1px solid rgba(255, 226, 174, 0.3);
+  box-shadow: 0 10px 28px rgba(36, 23, 20, 0.14);
 }
 
 .season-status-inner {
@@ -401,12 +403,20 @@ figure {
   padding: 5px 10px;
   border: 1px solid rgba(255, 255, 255, 0.36);
   border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
   font-size: 0.82rem;
   font-weight: 700;
 }
 
 .season-status strong {
-  font-size: 1.12rem;
+  font-size: clamp(1.08rem, 2vw, 1.28rem);
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+}
+
+.season-status-date {
+  color: #ffe2ae;
+  font-size: 1.08em;
 }
 
 .season-status p {
