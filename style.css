@@ -1382,3 +1382,55 @@ figure {
     transform: none;
   }
 }
+
+/* 料金や見出しを意味のまとまりで折り返す */
+.text-chunk {
+  display: inline-block;
+  max-width: 100%;
+}
+.price-value,
+.option-line,
+.hero-price-note {
+  display: block;
+}
+.price-value {
+  margin-top: 6px;
+  font-size: 0.85em;
+}
+.option-line + .option-line {
+  margin-top: 6px;
+}
+.hero-price-note {
+  font-size: 0.9em;
+}
+.back-link {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+@media (max-width: 640px) {
+  .guide-hero h1 {
+    font-size: clamp(1.7rem, 7.2vw, 2.4rem);
+    line-height: 1.4;
+    white-space: normal;
+  }
+  .storage-page .section-heading h2,
+  .storage-page .storage-card h2,
+  .storage-page .storage-method-card h3,
+  .storage-page .storage-note h3,
+  .storage-page .storage-download h2 {
+    white-space: normal;
+    line-height: 1.45;
+    text-wrap: balance;
+  }
+  .section-heading h2,
+  .amount-card h2,
+  .use-card h2 {
+    text-wrap: balance;
+  }
+  .storage-page a {
+    overflow-wrap: anywhere;
+  }
+  .freedom-note {
+    padding: 18px 16px;
+  }
+}
